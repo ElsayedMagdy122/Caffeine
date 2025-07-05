@@ -39,7 +39,7 @@ fun CoffeeCupSlider(modifier: Modifier = Modifier, coffeeName: String, coffeeIma
             modifier = Modifier
                 .size(64.dp)
                 .align(Alignment.Center),
-            painter = painterResource(R.drawable.the_chance_brand),
+            painter = painterResource(R.drawable.the_chance_coffe_big),
             contentDescription = null
         )
         Text(
