@@ -40,8 +40,15 @@ android {
 }
 
 dependencies {
+    implementation("com.google.accompanist:accompanist-pager:0.34.0")
+    implementation("androidx.compose.foundation:foundation:1.6.0") // أو الأحدث
+    implementation("androidx.compose.ui:ui-util:1.6.0")
+   // implementation("com.google.accompanist:accompanist-pager-indicators:0.34.0")
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+    implementation("io.insert-koin:koin-android:3.5.3")
+    implementation("io.insert-koin:koin-androidx-compose:3.5.3")
     implementation("androidx.compose.foundation:foundation:1.6.0")
-    implementation("com.google.accompanist:accompanist-pager:0.28.0")
+   // implementation("com.google.accompanist:accompanist-pager:0.28.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
