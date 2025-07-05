@@ -12,6 +12,7 @@ data class CaffieneColors(
     val titleColor: Color,
     val titleColor2: Color,
     val questionColorColor2: Color,
+    val mlText: Color,
 )
 
 val lightThemeColors = CaffieneColors(
@@ -23,6 +24,7 @@ val lightThemeColors = CaffieneColors(
     titleColor = Color(0xFFB3B3B3),
     titleColor2 = Color(0xFF3B3B3B),
     questionColorColor2 = Color(0xCC1F1F1F),
+    mlText = Color(0x99000000),
 )
 
 val LocalColorTheme = staticCompositionLocalOf { lightThemeColors }
