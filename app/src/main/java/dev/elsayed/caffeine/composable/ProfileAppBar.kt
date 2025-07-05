@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import dev.elsayed.caffeine.R
 import dev.elsayed.caffeine.ui.theme.Theme
 
-@Composable fun Header(modifier: Modifier = Modifier) {
+@Composable fun ProfileAppBar(modifier: Modifier = Modifier) {
     Row(
         modifier = modifier
             .windowInsetsPadding(WindowInsets.statusBars)

@@ -34,7 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import dev.elsayed.caffeine.R
 import dev.elsayed.caffeine.composable.CaffeineButton
-import dev.elsayed.caffeine.composable.Header
+import dev.elsayed.caffeine.composable.ProfileAppBar
 import dev.elsayed.caffeine.ui.theme.CaffieneTheme
 import dev.elsayed.caffeine.ui.theme.Singlet
 import dev.elsayed.caffeine.ui.theme.Theme
@@ -51,7 +51,7 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
                 modifier = Modifier.fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Header()
+                ProfileAppBar()
                 MagicTextWithStars()
                 CoffeeGhost()
                 Spacer(modifier = Modifier.weight(1f))
