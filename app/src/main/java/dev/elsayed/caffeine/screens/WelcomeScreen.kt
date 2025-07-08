@@ -32,6 +32,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import dev.elsayed.caffeine.navigation.CaffeineSliderScreen
 import dev.elsayed.caffeine.R
 import dev.elsayed.caffeine.composable.CaffeineButton
 import dev.elsayed.caffeine.composable.ProfileAppBar
@@ -40,7 +42,7 @@ import dev.elsayed.caffeine.ui.theme.Singlet
 import dev.elsayed.caffeine.ui.theme.Theme
 
 @Composable
-fun WelcomeScreen(modifier: Modifier = Modifier) {
+fun WelcomeScreen(modifier: Modifier = Modifier, navController: NavController) {
     CaffieneTheme {
         Box(
             modifier = Modifier
@@ -59,11 +61,17 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
             CaffeineButton(
                 text = "bring my coffee",
                 icon = ImageVector.vectorResource(R.drawable.coffee_cup),
-                modifier = Modifier.width(215.dp).align(Alignment.BottomCenter)
+                onNavClick ={ navController.navigate(
+                    CaffeineSliderScreen
+                )} ,
+                modifier = Modifier
+                    .width(215.dp)
+                    .align(Alignment.BottomCenter)
             )
         }
     }
 }
+
 @Composable
 private fun CoffeeGhost() {
     val infiniteTransition = rememberInfiniteTransition(label = "ghost_float")
@@ -113,7 +121,7 @@ private fun MagicTextWithStars(
 ) {
     val star = ImageVector.vectorResource(id = R.drawable.star)
 
-    Box (modifier = Modifier.padding(top = 24.dp)){
+    Box(modifier = Modifier.padding(top = 24.dp)) {
         Box(
             modifier = modifier.height(height = 200.dp)
         ) {
@@ -161,7 +169,7 @@ fun TwinklingStar(
 
     val alpha by infiniteTransition.animateFloat(
         initialValue = 0.2f, targetValue = 1f, animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 700, easing = FastOutSlowInEasing),
+            animation = tween(durationMillis = 800, easing = FastOutSlowInEasing),
             repeatMode = RepeatMode.Reverse
         ), label = "alpha_anim"
     )
@@ -177,5 +185,5 @@ fun TwinklingStar(
 @Preview(device = "spec:width=360dp,height=800dp", showSystemUi = true)
 @Composable
 fun WelcomeScreenPrev(modifier: Modifier = Modifier) {
-    WelcomeScreen()
+    // WelcomeScreen()
 }

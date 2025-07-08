@@ -56,7 +56,7 @@ fun CustomIconButton(
             .size(buttonSize)
             .clip(CircleShape)
             .background(backgroundColor)
-            .clickable { onClick },
+            .clickable { onClick() },
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Center
     ) {

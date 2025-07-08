@@ -1,10 +1,9 @@
 package dev.elsayed.caffeine.composable
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -20,7 +19,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -31,7 +29,7 @@ import dev.elsayed.caffeine.ui.theme.Theme
 import dev.elsayed.caffeine.ui.theme.Urbanist
 
 @Composable
-fun DetailsAppBar(modifier: Modifier = Modifier) {
+fun DetailsAppBar(modifier: Modifier = Modifier,onNavClick : ()->Unit = {}) {
     Row(
         modifier = modifier
             .windowInsetsPadding(WindowInsets.statusBars)
@@ -46,7 +44,8 @@ fun DetailsAppBar(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .size(48.dp)
                 .clip(CircleShape)
-                .background(Theme.colors.surfaceBackground),
+                .background(Theme.colors.surfaceBackground)
+                .clickable{onNavClick()},
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
