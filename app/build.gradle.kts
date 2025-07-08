@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    kotlin("plugin.serialization") version "2.2.0"
 }
 
 android {
@@ -40,15 +41,17 @@ android {
 }
 
 dependencies {
+    val nav_version = "2.9.1"
+    implementation("androidx.compose.animation:animation:1.6.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1")
+    implementation("androidx.navigation:navigation-compose:$nav_version")
     implementation("com.google.accompanist:accompanist-pager:0.34.0")
     implementation("androidx.compose.foundation:foundation:1.6.0") // أو الأحدث
     implementation("androidx.compose.ui:ui-util:1.6.0")
-   // implementation("com.google.accompanist:accompanist-pager-indicators:0.34.0")
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
     implementation("io.insert-koin:koin-android:3.5.3")
     implementation("io.insert-koin:koin-androidx-compose:3.5.3")
     implementation("androidx.compose.foundation:foundation:1.6.0")
-   // implementation("com.google.accompanist:accompanist-pager:0.28.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
