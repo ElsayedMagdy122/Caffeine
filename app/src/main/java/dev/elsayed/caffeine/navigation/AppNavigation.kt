@@ -17,7 +17,7 @@ import dev.elsayed.caffeine.screens.WelcomeScreen
 @Composable
 fun AppNavigation() {
     val navController = rememberNavController()
-    NavHost(navController, startDestination = CoffeeLineFinishScreen) {
+    NavHost(navController, startDestination = WelcomeScreen) {
         composable<WelcomeScreen> { WelcomeScreen(navController = navController) }
         composable<CaffeineSliderScreen> { CaffeineSliderScreen(navController = navController) }
         composable<CoffeeMakerScreen> { CoffeeMakerScreen(navController = navController) }
