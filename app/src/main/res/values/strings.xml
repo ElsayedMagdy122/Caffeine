@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Caffeine</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="hamsa">Elsayed Magdy ☀</string>
+    <string name="what_would_you_like_to_drink_today">What would you like to drink today?</string>
+    <string name="black">Black</string>
+    <string name="latte">Latte</string>
+    <string name="macchiato">Macchiato</string>
+    <string name="espresso">Espresso</string>
 </resources>
